@@ -14,13 +14,21 @@
  
 using namespace __gnu_pbds;
 using namespace std;
- 
+
+
+struct IoSetup {
+  IoSetup() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cout << fixed << setprecision(10);
+    cerr << fixed << setprecision(10);
+  }
+} iosetup;
+
 template <typename T>
 using ordered_set =
     tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-/*
- priority_queue <int, vector<int>, greater<int> > pq; 
-*/
+
 
 template< typename T1, typename T2 >
 ostream &operator<<(ostream &os, const pair< T1, T2 > &p) {
@@ -135,6 +143,18 @@ void debug_out(Head H, Tail... T) {
 #else
 #define debug(...) 42
 #endif
+
+/*
+ priority_queue <int, vector<int>, greater<int> > pq; 
+*/
+
+
+using ll = long long int;
+const int mod = 1e9 + 7;
+
+
+
+
 
 void solve(int tt) {
 
