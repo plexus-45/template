@@ -55,6 +55,12 @@ istream &operator>>(istream &is, vector< T > &v) {
   for(T &in : v) is >> in;
   return is;
 }
+
+template< typename T1, typename T2 >
+inline bool chmax(T1 &a, T2 b) { return a < b && (a = b, true); }
+ 
+template< typename T1, typename T2 >
+inline bool chmin(T1 &a, T2 b) { return a > b && (a = b, true); }
  
 template <typename A, typename B>
 string to_string(pair<A, B> p);
@@ -147,13 +153,8 @@ void debug_out(Head H, Tail... T) {
 /*
  priority_queue <int, vector<int>, greater<int> > pq; 
 */
-
-
 using ll = long long int;
 const int mod = 1e9 + 7;
-
-
-
 
 
 void solve(int tt) {
