@@ -163,9 +163,8 @@ void solve(int tt) {
 }
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0), cout.tie(0);
-
+	
+        IoSetup();
 	int tt;
 	cin >> tt;
 	for (int i = 1; i <= tt; i++){
