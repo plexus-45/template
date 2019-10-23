@@ -2,10 +2,52 @@
   Author: plexus97
 */ 
 
-
+//~ while (clock()<=69*CLOCKS_PER_SEC)
+//~ #pragma comment(linker, "/stack:200000000")
+#pragma GCC optimize("O3")
+//~ #pragma GCC optimize("Ofast")
+//~ #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+//~ #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+ 
+using namespace __gnu_pbds;
 using namespace std;
+ 
+template <typename T>
+using ordered_set =
+    tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+/*
+ priority_queue <int, vector<int>, greater<int> > pq; 
+*/
 
+template< typename T1, typename T2 >
+ostream &operator<<(ostream &os, const pair< T1, T2 > &p) {
+  os << p.first << " " << p.second;
+  return os;
+}
+ 
+template< typename T1, typename T2 >
+istream &operator>>(istream &is, pair< T1, T2 > &p) {
+  is >> p.first >> p.second;
+  return is;
+}
+ 
+template< typename T >
+ostream &operator<<(ostream &os, const vector< T > &v) {
+  for(int i = 0; i < (int) v.size(); i++) {
+    os << v[i] << (i + 1 != v.size() ? " " : "");
+  }
+  return os;
+}
+ 
+template< typename T >
+istream &operator>>(istream &is, vector< T > &v) {
+  for(T &in : v) is >> in;
+  return is;
+}
+ 
 template <typename A, typename B>
 string to_string(pair<A, B> p);
 
