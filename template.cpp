@@ -155,6 +155,24 @@ void debug_out(Head H, Tail... T) {
 */
 using ll = long long int;
 const int mod = 1e9 + 7;
+#define rep(i,n) for(int (i)=0;(i)<(int)(n);++(i))
+#define rer(i,l,u) for(int (i)=(int)(l);(i)<=(int)(u);++(i))
+#define reu(i,l,u) for(int (i)=(int)(l);(i)<(int)(u);++(i))
+#if defined(_MSC_VER) || __cplusplus > 199711L
+#define aut(r,v) auto r = (v)
+#else
+#define aut(r,v) __typeof(v) r = (v)
+#endif
+#define each(it,o) for(aut(it, (o).begin()); it != (o).end(); ++ it)
+#define all(o) (o).begin(), (o).end()
+#define pb(x) push_back(x)
+#define mp(x,y) make_pair((x),(y))
+#define mset(m,v) memset(m,v,sizeof(m))
+#define INF 0x3f3f3f3f
+#define INFL 0x3f3f3f3f3f3f3f3fLL
+typedef vector<int> vi; 
+typedef pair<int,int> pii;
+typedef vector<pair<int,int> > vpii;
 
 
 void solve(int tt) {
