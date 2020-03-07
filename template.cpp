@@ -1,5 +1,5 @@
 /*
-  Author: plexus97
+  Author: the-algorist
 */ 
 
 //~ while (clock()<=69*CLOCKS_PER_SEC)
