@@ -3,11 +3,11 @@
 */ 
 
 //~ while (clock()<=69*CLOCKS_PER_SEC)
-//~ #pragma comment(linker, "/stack:200000000")
+#pragma comment(linker, "/stack:200000000")
 #pragma GCC optimize("O3")
-//~ #pragma GCC optimize("Ofast")
-//~ #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-//~ #pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
