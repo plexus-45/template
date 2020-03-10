@@ -136,22 +136,23 @@ string to_string(tuple<A, B, C, D> p) {
   return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ", " + to_string(get<3>(p)) + ")";
 }
 
-void debug_out() { cerr << endl; }
-
-template <typename Head, typename... Tail>
-void debug_out(Head H, Tail... T) {
-  cerr << " " << to_string(H);
-  debug_out(T...);
-}
-
-#ifdef LOCAL
-#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#define TRACE
+#ifdef TRACE
+#define trace(...) __f(#__VA_ARGS__, __VA_ARGS__)
+    template <typename Arg1>
+    void __f(const char* name, Arg1&& arg1){
+        cout << name << " : " << arg1 << std::endl;
+        //use cerr if u want to display at the bottom
+    }
+    template <typename Arg1, typename... Args>
+    void __f(const char* names, Arg1&& arg1, Args&&... args){
+        const char* comma = strchr(names + 1, ','); cout.write(names, comma - names) << " : " << arg1<<" | ";__f(comma+1, args...);
+    }
 #else
-#define debug(...) 42
+#define trace(...)
 #endif
-
 /*
- priority_queue <int, vector<int>, greater<int> > pq; 
+ priority_queue <int, vector<int>, greater<int> > min_pq; 
 */
 using ll = long long int;
 const int mod = 1e9 + 7;
