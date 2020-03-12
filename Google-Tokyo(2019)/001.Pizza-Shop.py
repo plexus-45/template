@@ -11,6 +11,23 @@ def find_piz_top(piz, top, target):
 
     for i in range(1, Lp + 1):
         for j in range(1, Lt + 1):
+            /*
+            int min=INT_MAX;
+                 if(abs(target-dp[i-1][j])<min){
+                     dp[i][j]=dp[i-1][j];
+                     min=abs(target-dp[i-1][j]);
+                 }
+                 else  if(abs(target-dp[i][j-1])<min){
+                     dp[i][j]=dp[i][j-1];
+                     min=abs(target-dp[i][j-1]);
+                 }
+                 else  if(abs(target-(piz[i - 1] + top[j - 1]))<min){
+                     dp[i][j]=piz[i - 1] + top[j - 1];
+                     min=abs(target-piz[i - 1] + top[j - 1]);
+                 }
+            
+            
+            */
             dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], piz[i - 1] + top[j - 1], key=lambda x: abs(target - x))
             if dp[i][j] == target: # if we found the exact match we can just return it.
                 return target
