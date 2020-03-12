@@ -185,6 +185,10 @@ void solve(int tt) {
 int main() {
 	
         IoSetup();
+	#ifndef ONLINE_JUDGE
+        freopen("input.txt","r",stdin);
+        freopen("output.txt","w",stdout);
+        #endif
 	int tt;
 	cin >> tt;
 	for (int i = 1; i <= tt; i++){
