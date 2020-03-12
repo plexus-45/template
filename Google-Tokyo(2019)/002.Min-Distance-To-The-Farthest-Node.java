@@ -1,4 +1,4 @@
-/*
+
 // "static void main" must be defined in a public class.
 // https://leetcode.com/discuss/interview-question/356378/Google-or-OA-2019-or-Min-Distance-To-The-Farthest-Node
 public class Main {
@@ -58,4 +58,4 @@ public class Main {
     }
     
 }
-*/
+
