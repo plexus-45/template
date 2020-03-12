@@ -6,13 +6,13 @@ https://leetcode.com/discuss/interview-question/356935/
                      dp[i][j]=dp[i-1][j];
                      min=abs(target-dp[i-1][j]);
                  }
-                 else  if(abs(target-dp[i][j-1])<min){
+                 if(abs(target-dp[i][j-1])<min){
                      dp[i][j]=dp[i][j-1];
                      min=abs(target-dp[i][j-1]);
                  }
-                 else  if(abs(target-(piz[i - 1] + top[j - 1]))<min){
+                 if(abs(target-(piz[i - 1] + top[j - 1]))<min){
                      dp[i][j]=piz[i - 1] + top[j - 1];
-                     min=abs(target-piz[i - 1] + top[j - 1]);
+                     min=abs(target-(piz[i - 1] + top[j - 1]));
                  }
             
             
