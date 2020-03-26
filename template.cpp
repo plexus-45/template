@@ -175,9 +175,7 @@ const int mod = 1e9 + 7;
 #define mset(m,v) memset(m,v,sizeof(m))
 #define INF 0x3f3f3f3f
 #define INFL 0x3f3f3f3f3f3f3f3fLL
-typedef vector<int> vi; 
-typedef pair<int,int> pii;
-typedef vector<pair<int,int> > vpii;
+
 
 
 void solve(int tt) {
