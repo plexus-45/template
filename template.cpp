@@ -168,6 +168,10 @@ const int mod = 1e9 + 7;
 #define all(o) (o).begin(), (o).end()
 #define pb(x) push_back(x)
 #define mp(x,y) make_pair((x),(y))
+#define ff first
+#define ss second
+#define ub upper_bound
+#define lb lower_bound
 #define mset(m,v) memset(m,v,sizeof(m))
 #define INF 0x3f3f3f3f
 #define INFL 0x3f3f3f3f3f3f3f3fLL
