@@ -6,7 +6,8 @@ typedef unsigned long long llu;
 typedef long double ldo;
 
 #define forz(i,n)  for(ll i=0;i<n;++i)
-#define rep(i,s,e) for(ll i=s;i<e;++i)
+#define fors(i,s,e) for(ll i=s;i<e;i++)
+#define rep(i,s,e) for(ll i=s;i<=e;++i)
 #define urep(i,s,e)  for(ll i=s;i>=e;--i)
 #if defined(_MSC_VER) || __cplusplus > 199711L
 #define aut(r,v) auto r = (v)
