@@ -19,8 +19,7 @@ ll toint(const string &s) {stringstream ss; ss << s; ll x; ss >> x; return x;}
 string tostring ( ll number ){stringstream ss; ss<< number; return ss.str();}
 
 template <typename T>
-using ordered_set =
-    tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+using ordered_set = tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
 
 //arr_in
 template <typename T > 
